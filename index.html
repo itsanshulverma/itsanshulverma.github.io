@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Alata&display=swap"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script async src="scripts/scripts.js"></script>
+    <title>Anshul Verma | Personal Website</title>
+  </head>
+  <body>
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <main class="container">
+      <nav>
+        <span class="menu-bg"></span>
+        <p class="nav-logo"><b>a.</b></p>
+        <div class="menu-btn" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu">
+          <ul>
+            <li class="menu-item">
+              <a href="#intro-section" onclick="toggleMenu()">Home</a>
+            </li>
+            <li class="menu-item">
+              <a href="#projects-section" onclick="toggleMenu()">Work</a>
+            </li>
+            <li class="menu-item">
+              <a href="#about-section" onclick="toggleMenu()">About</a>
+            </li>
+            <li class="menu-item">
+              <a href="#skills-section" onclick="toggleMenu()">Skills</a>
+            </li>
+            <li class="menu-item">
+              <a href="" onclick="toggleMenu()">Blog</a>
+            </li>
+          </ul>
+          <ul class="social-links">
+            <li>
+              <a
+                href="https://www.facebook.com/its.anshulverma"
+                onclick="toggleMenu()"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/itsanshulverma" onclick="toggleMenu()"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/itsAnshulVerma"
+                onclick="toggleMenu()"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/itsanshulverma"
+                onclick="toggleMenu()"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/itsanshulverma"
+                onclick="toggleMenu()"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="gototop-btn" onclick="closeMenu()"></div>
+      </nav>
+      <header
+        id="intro-section"
+        class="intro-section"
+        style="background-image: url('assets/img/bg-1.svg');"
+      >
+        <h1 class="intro-heading">i am<br />anshul<br />verma</h1>
+        <div class="intro-body">
+          <img
+            src="assets/img/intro-avatar.jpeg"
+            alt="Anshul Verma Photo"
+            class="intro-avatar"
+          />
+          <p class="intro-text">a developer fiddling with web technologies</p>
+          <ul class="social-links">
+            <li>
+              <a href="https://www.facebook.com/its.anshulverma"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/itsanshulverma"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/itsAnshulVerma"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/itsanshulverma"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/itsanshulverma"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+          </ul>
+          <a href="#projects-section" class="scroll-down-btn"
+            ><i class="fas fa-angle-down"></i
+          ></a>
+        </div>
+      </header>
+      <section id="projects-section" class="projects-section">
+        <div class="section-heading">
+          <p class="main-heading">projects</p>
+          <p class="background-text">work</p>
+        </div>
+        <div class="section-body">
+          <div class="projects-container">
+            <div class="project">
+              <p class="project-heading">project 01</p>
+              <i class="fas fa-laptop-code"></i>
+              <p class="project-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip.
+              </p>
+              <button class="project-btn">demo</button>
+            </div>
+            <hr class="seperator" />
+            <div class="project">
+              <p class="project-heading">project 02</p>
+              <i class="fas fa-laptop-code"></i>
+              <p class="project-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip.
+              </p>
+              <button class="project-btn">demo</button>
+            </div>
+            <hr class="seperator" />
+            <div class="project">
+              <p class="project-heading">project 03</p>
+              <i class="fas fa-laptop-code"></i>
+              <p class="project-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip.
+              </p>
+              <button class="project-btn">demo</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about-section" class="about-section">
+        <div class="section-heading">
+          <p class="main-heading">about me</p>
+          <p class="background-text">about</p>
+        </div>
+        <div class="section-body">
+          <img
+            src="assets/img/about-avatar.jpeg"
+            alt="Anshul Verma"
+            class="avatar"
+          />
+          <p class="about-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip.
+          </p>
+        </div>
+      </section>
+      <section id="skills-section" class="skills-section">
+        <div class="section-heading">
+          <p class="main-heading">skills</p>
+          <p class="background-text">skills</p>
+        </div>
+        <div class="section-body">
+          <p class="skills-subheading">i m good with...</p>
+          <div class="skill">
+            <p class="skill-title">
+              <i class="fab fa-html5"></i>+<i class="fab fa-css3-alt"></i
+              >HTML+CSS
+            </p>
+            <div class="progress-bar"></div>
+          </div>
+          <div class="skill">
+            <p class="skill-title"><i class="fab fa-js"></i>JavaScript</p>
+            <div class="progress-bar"></div>
+          </div>
+          <div class="skill">
+            <p class="skill-title"><i class="fab fa-java"></i>Java</p>
+            <div class="progress-bar"></div>
+          </div>
+          <div class="skill">
+            <p class="skill-title"><i class="fab fa-react"></i>React</p>
+            <div class="progress-bar"></div>
+          </div>
+          <div class="skill">
+            <p class="skill-title">C++</p>
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="section-heading">
+          <p class="main-heading">lets<br />connect.</p>
+          <p class="sub-heading">and talk about ideas.</p>
+          <p class="background-text">contact</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:itsanshulverma@gmail.com" class="email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <ul class="social-links">
+            <li>
+              <a href="https://github.com/itsanshulverma"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/itsAnshulVerma"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/itsanshulverma"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://codepen.io/itsanshulverma"
+                ><i class="fab fa-codepen"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/its.anshulverma"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/itsanshulverma"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <i class="fas fa-code-branch"></i>
+          <p>&copy; Anshul Verma, 2020-21</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

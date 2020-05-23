@@ -1,0 +1,9 @@
+{
+  "name": "itsanshulverma",
+  "version": "2.0.0",
+  "description": "Responsive Portfolio Website",
+  "main": "index.html",
+  "author": "Anshul Verma",
+  "license": "MIT",
+  "dependencies": {}
+}
