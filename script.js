@@ -121,3 +121,55 @@ function repeatBounceAnimation() {
 }
 setInterval(repeatBounceAnimation, 3000);
 
+// // Register GSAP Plugins
+gsap.registerPlugin(ScrollTrigger);
+
+// Animate Heading and Background Text
+gsap.from(".connect-heading h2", {
+  opacity: 0,
+  y: 20,
+  duration: 1.5,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".about",
+    start: "bottom bottom",
+  },
+});
+
+gsap.from(".bg-text", {
+  opacity: 0,
+  y: 30,
+  duration: 1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".about",
+    start: "bottom bottom",
+  },
+});
+
+// Animate Email Button
+gsap.from(".email", {
+  opacity: 0,
+  y: 20,
+  scale: 0.9,
+  duration: 1,
+  ease: "elastic.out(1, 0.5)",
+  scrollTrigger: {
+    trigger: ".about",
+    start: "bottom bottom",
+  },
+});
+
+// Animate Social Icons with Stagger
+gsap.from("connect-options .social-icons .circle-btn", {
+  opacity: 0,
+  scale: 0.5,
+  duration: 1,
+  delay: 1,
+  stagger: 0.2,
+  ease: "back.out(1.7)",
+  scrollTrigger: {
+    trigger: ".about",
+    start: "center bottom",
+  },
+});
