@@ -121,10 +121,42 @@ function repeatBounceAnimation() {
 }
 setInterval(repeatBounceAnimation, 3000);
 
-// // Register GSAP Plugins
+// Register GSAP Plugins
 gsap.registerPlugin(ScrollTrigger);
 
-// Animate Heading and Background Text
+gsap.from(".about-heading .bg-text", {
+  opacity: 0,
+  y: 30,
+  duration: 1.5,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".about",
+    start: "top bottom",
+  },
+});
+
+gsap.from(".about-content .profile-photo", {
+  opacity: 0.2,
+  x: -30,
+  duration: 0.8,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".about",
+    start: "top bottom",
+  },
+});
+
+gsap.from(".about-content .about-text p", {
+  opacity: 0,
+  x: 50,
+  duration: 1,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: ".about",
+    start: "top bottom",
+  },
+});
+
 gsap.from(".connect-heading h2", {
   opacity: 0,
   y: 20,
@@ -136,10 +168,10 @@ gsap.from(".connect-heading h2", {
   },
 });
 
-gsap.from(".bg-text", {
+gsap.from(".connect-heading .bg-text", {
   opacity: 0,
   y: 30,
-  duration: 1,
+  duration: 2,
   ease: "power2.out",
   scrollTrigger: {
     trigger: ".about",
@@ -147,13 +179,11 @@ gsap.from(".bg-text", {
   },
 });
 
-// Animate Email Button
-gsap.from(".email", {
+gsap.from(".connect-options .email", {
   opacity: 0,
-  y: 20,
-  scale: 0.9,
-  duration: 1,
-  ease: "elastic.out(1, 0.5)",
+  y: 30,
+  duration: 1.5,
+  ease: "power2.out",
   scrollTrigger: {
     trigger: ".about",
     start: "bottom bottom",
@@ -161,12 +191,10 @@ gsap.from(".email", {
 });
 
 // Animate Social Icons with Stagger
-gsap.from("connect-options .social-icons .circle-btn", {
+gsap.from(".connect-options .social-icons", {
   opacity: 0,
-  scale: 0.5,
-  duration: 1,
-  delay: 1,
-  stagger: 0.2,
+  y: -20,
+  duration: 2,
   ease: "back.out(1.7)",
   scrollTrigger: {
     trigger: ".about",

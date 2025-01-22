@@ -8,6 +8,7 @@
   --secondary-color: #aaa;
   --gray-color: #959595;
   --bg-gray: #f2f2f2;
+  --black-color: #0c0b0b;
   --gmail-color: #d14836;
   --gmail-color-transparent: #d1483634;
   --linkedin-color: #0077b5;
@@ -208,12 +209,14 @@ nav {
 }
 
 .cv-btn {
-  font-size: 1.8rem;
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   margin-top: -50px;
   background: var(--accent-color-transparent);
   color: var(--accent-color);
+}
+.cv-btn img {
+  width: 27px;
 }
 
 .bottom-icons {
@@ -251,12 +254,45 @@ nav {
 /***************************/
 
 .about {
+  margin: 0px auto 50px auto;
+}
+
+.about-heading {
+  position: relative;
+  height: 175px;
+  background-color: var(--black-color);
+}
+
+.about-heading .bg-text {
+  position: absolute;
+  top: -150px;
+  right: -10px;
+  font-size: 10rem;
+  font-weight: 500;
+  color: var(--white);
+  opacity: 0.1 !important;
+  z-index: 1;
+}
+
+.about-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 80px auto;
   padding: 0 50px;
-  min-height: 65vh;
+}
+
+.about-content .profile-photo {
+  width: 275px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: -100px;
+  z-index: 2;
+}
+
+.about-content .about-text {
+  margin: 25px 0 30px 50px;
+}
+.about-content .about-text p{
+  margin: 12px 0;
 }
 
 /***************************/
@@ -407,21 +443,21 @@ nav {
     text-align: center;
   }
   .hero p.intro {
-    font-size: 1.25rem;
-    margin-top: 16vh;
+    font-size: 1.2rem;
+    margin-top: 15.5vh;
   }
   .hero h1 {
     font-size: 1rem;
-    line-height: 3.5rem;
+    line-height: 3.1rem;
   }
   .hero h1 span.line-two {
-    margin-left: 10px;
+    margin-left: 5px;
   }
   .hero h1 span.line-two .highlight-large {
     margin-left: 5px;
   }
   .highlight-large {
-    font-size: 4rem;
+    font-size: 3.7rem;
   }
 
   /* Hero Links */
@@ -439,11 +475,11 @@ nav {
     font-size: 1.7rem;
     width: 70px;
     height: 70px;
-    margin-top: 10px;
+    margin-top: 0px;
   }
   .bottom-icons {
     position: initial;
-    margin-top: 80px;
+    margin-top: 60px;
   }
 
   /* Scroll Down CTA */
@@ -457,10 +493,29 @@ nav {
 
   /* About Section */
 
-  .about {
+  .about-heading {
+    height: 200px;
+  }
+  .about-heading .bg-text {
+    top: 2px;
+    transform: translateX(-50%);
+    left: 55%;
+    font-size: 3rem;
+    opacity: 0.5 !important;
+  }
+  .about-content {
     flex-direction: column;
-    margin: 50px auto;
-    padding: 0 35px;
+    gap: 20px;
+    padding: 0 50px;
+  }
+  .about-content .profile-photo {
+    width: 225px;
+    margin-top: -50px;
+  }
+  .about-content .about-text {
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem;
   }
 
   /* Connect & Footer */
