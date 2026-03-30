@@ -930,19 +930,19 @@ nav {
     margin: 40px 0 35px 0;
   }
   .journey-summary-timeline {
-    padding: 20px 0 20px 20px;
+    padding: 0px 0 10px 10px;
     margin: 30px 0;
   }
   .timeline-line {
     top: 0;
-    left: 100px;
+    left: 90px;
     width: 2px;
     height: 100%;
     background: linear-gradient(to bottom, var(--accent-color-transparent), var(--accent-color), var(--accent-color-transparent));
   }
   .timeline-points {
     flex-direction: column-reverse;
-    gap: 40px;
+    gap: 80px;
     align-items: flex-start;
   }
   .timeline-point {
@@ -953,15 +953,16 @@ nav {
     width: 100%;
   }
   .timeline-point::before {
-    position: static;
+    position: absolute;
     font-size: 0.8rem;
     order: 2;
-    width: 60px;
+    left: 90px;
+    top: 2px;
   }
   .point-icon {
     order: 1;
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
   }
   .point-icon img {
     width: 35px;
@@ -972,8 +973,11 @@ nav {
     gap: 4px;
     order: 3;
     align-items: flex-start;
+    position: absolute;
+    left: 90px;
+    top: 25px;
   }
-  .point-year {
+  .point-label {
     font-size: 0.8rem;
   }
   .point-desc {
