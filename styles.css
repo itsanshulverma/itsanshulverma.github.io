@@ -975,7 +975,7 @@ nav {
     align-items: flex-start;
     position: absolute;
     left: 90px;
-    top: 25px;
+    top: 20px;
   }
   .point-label {
     font-size: 0.8rem;
@@ -987,6 +987,10 @@ nav {
   }
   .timeline-point:hover {
     transform: translateX(5px);
+  }
+  .timeline-point:hover::before {
+    left: 90px;
+    top: 2px;
   }
 
   /* Experience Section */
