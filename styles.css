@@ -299,6 +299,140 @@ nav {
   margin: 12px 0;
 }
 
+/* Journey Summary Timeline */
+.timeline-title {
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  color: var(--accent-color);
+  gap: 20px;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  margin: 25px 0 60px 0;
+  opacity: 0.7;
+}
+
+.timeline-title::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--accent-color-transparent), transparent);
+}
+
+.timeline-title::before {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(to left, var(--accent-color-transparent), transparent);
+}
+
+.journey-summary-timeline {
+  margin: 40px 0;
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--accent-color-transparent), var(--accent-color), var(--accent-color-transparent));
+  z-index: 1;
+}
+
+.timeline-points {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  margin: 0 50px;
+}
+
+.timeline-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 15%;
+  text-align: center;
+}
+
+.timeline-point:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-point-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.timeline-point::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -30px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  letter-spacing: 1px;
+  transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+.timeline-point:hover::before {
+  top: -35px;
+}
+
+.point-icon {
+  background-color: var(--white);
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 10px;
+  width: 70px;
+  height: 70px;
+}
+
+.point-icon img {
+  width: 40px;
+  height: auto;
+}
+
+.timeline-point:hover .point-icon {
+  box-shadow: 0 6px 15px var(--accent-color-transparent);
+}
+
+.point-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  max-width: 150px;
+  margin-top: 5px;
+}
+
+.point-desc {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  opacity: 0.7;
+  line-height: 1.2;
+  margin-top: 2px;
+  max-width: 140px;
+}
+
 /***************************/
 /* Experience Section      */
 /***************************/
@@ -788,6 +922,67 @@ nav {
     margin: 0;
     text-align: center;
     font-size: 0.9rem;
+  }
+
+  /* Timeline */
+
+  .timeline-title {
+    margin: 40px 0 35px 0;
+  }
+  .journey-summary-timeline {
+    padding: 20px 0 20px 20px;
+    margin: 30px 0;
+  }
+  .timeline-line {
+    top: 0;
+    left: 100px;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accent-color-transparent), var(--accent-color), var(--accent-color-transparent));
+  }
+  .timeline-points {
+    flex-direction: column-reverse;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  .timeline-point {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+    width: 100%;
+  }
+  .timeline-point::before {
+    position: static;
+    font-size: 0.8rem;
+    order: 2;
+    width: 60px;
+  }
+  .point-icon {
+    order: 1;
+    width: 55px;
+    height: 55px;
+  }
+  .point-icon img {
+    width: 35px;
+  }
+  .timeline-point-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    order: 3;
+    align-items: flex-start;
+  }
+  .point-year {
+    font-size: 0.8rem;
+  }
+  .point-desc {
+    max-width: none;
+    font-size: 0.8rem;
+    text-align: left;
+  }
+  .timeline-point:hover {
+    transform: translateX(5px);
   }
 
   /* Experience Section */
