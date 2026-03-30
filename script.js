@@ -190,6 +190,42 @@ gsap.from(".connect-options .email", {
   },
 });
 
+// Experience Section Animations
+gsap.from(".experience-heading .bg-text", {
+  opacity: 0,
+  y: 30,
+  duration: 1.5,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".experience",
+    start: "top bottom",
+  },
+});
+
+gsap.from(".experience-item", {
+  opacity: 0,
+  x: -70,
+  duration: 1,
+  stagger: 0.3,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".experience",
+    start: "top bottom",
+  },
+});
+
+gsap.from(".responsibilities li", {
+  opacity: 0,
+  x: 20,
+  duration: 0.8,
+  stagger: 0.1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".experience",
+    start: "top bottom",
+  },
+});
+
 // Animate Social Icons with Stagger
 gsap.from(".connect-options .social-icons", {
   opacity: 0,

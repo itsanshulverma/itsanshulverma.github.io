@@ -274,6 +274,10 @@ nav {
   z-index: 1;
 }
 
+.about-heading h2 {
+  display: none;
+}
+
 .about-content {
   display: flex;
   justify-content: space-between;
@@ -293,6 +297,265 @@ nav {
 }
 .about-content .about-text p{
   margin: 12px 0;
+}
+
+/***************************/
+/* Experience Section      */
+/***************************/
+
+.experience {
+  margin: 0px auto 30px auto;
+}
+
+.experience-heading {
+  position: relative;
+  height: 175px;
+  background-color: var(--black-color);
+}
+
+.experience-heading .bg-text {
+  position: absolute;
+  top: -125px;
+  right: -10px;
+  font-size: 9rem;
+  font-weight: 500;
+  color: var(--white);
+  opacity: 0.1 !important;
+  z-index: 1;
+}
+
+.experience-heading h2 {
+  display: none;
+}
+
+.experience-content {
+  padding: 50px;
+  background-color: var(--white);
+}
+
+.experience-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.experience-item {
+  border-left: 2px solid var(--accent-color);
+  padding-left: 30px;
+  position: relative;
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+.experience-item-edu {
+  border-left: 2px solid var(--secondary-color);
+  padding-left: 30px;
+  position: relative;
+}
+
+.experience-item-edu::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.exp-type-badge {
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  margin: 10px 0 -15px 0;
+  opacity: 0.5;
+}
+.badge-edu {
+  color: var(--gray-color);
+}
+.badge-pro {
+  color: var(--accent-color);
+}
+
+.exp-type-badge::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--accent-color-transparent), transparent);
+}
+
+.exp-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.exp-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: -4px;
+}
+
+.exp-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.exp-company-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.exp-header .company {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+.company-link {
+  font-size: 0.7rem;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+
+.company-link:hover {
+  color: var(--accent-color);
+}
+
+.exp-header .date {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  margin-top: 5px;
+}
+
+.exp-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 5px 0 18px 0;
+}
+
+.exp-pill {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  background-color: var(--bg-gray);
+  color: var(--gray-color);
+  border-radius: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.exp-attachments {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.attachment-btn, .other-attachment {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.other-attachment {
+  margin: 0 !important;
+}
+
+.attachment-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  background-color: var(--accent-color-transparent);
+}
+
+.exp-subheading {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin: 15px 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exp-subheading::after {
+  content: '';
+  height: 1px;
+  flex-grow: 1;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.responsibilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.responsibilities li {
+  font-family: 'Inter', 'Poppins', sans-serif;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 0;
+  margin-bottom: 12px;
+  color: var(--primary-color);
+  line-height: 1.3;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.responsibilities li i {
+  color: var(--accent-color);
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.experience-item-edu .exp-header h3 {
+  color: var(--gray-color);
+  font-size: 1.3rem;
+}
+
+.experience-item-edu .exp-pill {
+  background-color: transparent;
+  border: 1px dashed var(--secondary-color);
+  color: var(--gray-color);
+}
+
+.experience-item-edu .responsibilities li i {
+  color: var(--secondary-color);
 }
 
 /***************************/
@@ -497,11 +760,20 @@ nav {
     height: 200px;
   }
   .about-heading .bg-text {
-    top: 2px;
-    transform: translateX(-50%);
-    left: 55%;
-    font-size: 3rem;
-    opacity: 0.5 !important;
+    text-align: center;
+    font-size: 11rem;
+    left: -10px;
+    top: -125px;
+    opacity: 0.05 !important;
+  }
+  .about-heading h2 {
+    display: block;
+    font-size: 2.7rem;
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+    opacity: 0.6;
+    padding-top: 35px;
   }
   .about-content {
     flex-direction: column;
@@ -516,6 +788,45 @@ nav {
     margin: 0;
     text-align: center;
     font-size: 0.9rem;
+  }
+
+  /* Experience Section */
+  
+  .experience-heading .bg-text {
+    text-align: center;
+    font-size: 8rem;
+    left: -10px;
+    top: -70px;
+    opacity: 0.05 !important;
+  }
+  .experience-heading h2 {
+    display: block;
+    font-size: 2.7rem;
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+    opacity: 0.6;
+    padding-top: 35px;
+  }
+  .experience-content {
+    padding: 30px 32px;
+  }
+  .experience-item {
+    padding-left: 20px;
+  }
+  .exp-header h3 {
+    font-size: 1.2rem;
+    margin-bottom: -10px;
+  }
+  .exp-header .date {
+    margin-top: 0px;
+  }
+  .exp-header .company {
+    font-size: 1rem;
+  }
+  .responsibilities li {
+    font-size: 0.9rem;
+    text-align: left;
   }
 
   /* Connect & Footer */
