@@ -384,7 +384,7 @@ nav {
   text-transform: lowercase;
   letter-spacing: 1px;
   margin: 10px 0 -15px 0;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 .badge-edu {
   color: var(--gray-color);
@@ -515,7 +515,7 @@ nav {
   content: '';
   height: 1px;
   flex-grow: 1;
-  background-color: rgba(0, 0, 0, 0.05);
+  background: linear-gradient(to right, var(--accent-color-transparent), transparent);
 }
 
 .responsibilities {
@@ -814,19 +814,37 @@ nav {
   .experience-item {
     padding-left: 20px;
   }
+  .exp-header-top {
+    display: flex;
+    flex-direction: column-reverse; 
+  } 
   .exp-header h3 {
-    font-size: 1.2rem;
-    margin-bottom: -10px;
+    font-size: 1.2rem; 
+    margin: -18px 0 -3px 0;
   }
   .exp-header .date {
-    margin-top: 0px;
+    margin: -5px 0 10px 0;
   }
   .exp-header .company {
     font-size: 1rem;
+    margin-top: 0;
+  }
+  .exp-pills {
+    margin: 0;
+    gap: 5px;
+  }
+  .exp-pill {
+    font-size: 0.6rem;
+    padding: 2px 8px;
+    border: 1px solid rgba(0,0,0,0.07);
   }
   .responsibilities li {
     font-size: 0.9rem;
     text-align: left;
+  }
+  .attachment-btn, .other-attachment {
+    font-size: 0.8rem;
+    padding: 4px 12px;
   }
 
   /* Connect & Footer */

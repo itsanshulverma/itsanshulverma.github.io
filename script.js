@@ -202,6 +202,18 @@ gsap.from(".experience-heading .bg-text", {
   },
 });
 
+gsap.from(".exp-type-badge", {
+  opacity: 0,
+  x: 20,
+  duration: 0.8,
+  stagger: 0.1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".experience",
+    start: "top bottom",
+  },
+});
+
 gsap.from(".experience-item", {
   opacity: 0,
   x: -70,
