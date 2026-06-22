@@ -84,7 +84,7 @@ gsap.from(".hero h1 span", {
   delay: 0.4
 });
 
-gsap.from(".social-icons .circle-btn", {
+gsap.from(".social-icons .circle-btn, .social-icons .pill-btn", {
   opacity: 0,
   y: -10,
   duration: 1,

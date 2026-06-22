@@ -143,6 +143,29 @@ nav {
   display: none;
 }
 
+.pill-btn {
+  height: 50px;
+  border-radius: 25px; /* Creates the rounded pill shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .9rem;
+  font-weight: 400;
+  padding: 0 22px;
+  gap: 8px;
+  transform: translateY(-10px);
+  transition: transform 0.3s ease, background-color 0.3s ease !important;
+}
+
+.pill-btn:hover {
+  transform: translateY(-10px) scale(1.05) !important;
+}
+
+.cv-download {
+  color: var(--accent-color);
+  background-color: var(--accent-color-transparent);
+}
+
 /***************************/
 /* Hero Section            */
 /***************************/
@@ -897,13 +920,25 @@ nav {
     top: 50px;
     right: 50px;
     background-color: var(--white);
-    padding: 30px 50px;
+    padding: 30px 40px 35px 40px;
     border-radius: 10px;
     z-index: 1000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transform: scale(0);
     opacity: 0;
     transform-origin: top right;
+  }
+  .mobile-cv-btn {
+    display: flex;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem !important;
+    font-weight: 400 !important;
+    padding: 8px 20px !important;
+    gap: 8px;
+    color: var(--accent-color);
+    background-color: var(--accent-color-transparent);
   }
 
   /* Hero Section */
@@ -950,6 +985,9 @@ nav {
   .bottom-icons {
     position: initial;
     margin-top: 60px;
+  }
+  .social-icons .pill-btn {
+    display: none;
   }
 
   /* Scroll Down CTA */
