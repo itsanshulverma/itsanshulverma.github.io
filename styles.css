@@ -19,6 +19,8 @@
   --medium-color-transparent: #00000028;
   --instagram-color: #e4405f;
   --instagram-color-transparent: #e4405f34;
+  --topmate-color: #ff5a5f;
+  --topmate-color-transparent: #ff5a5f34;
 }
 
 /* Basic Styles */
@@ -68,6 +70,10 @@ a {
 .instagram {
   color: var(--instagram-color);
   background-color: var(--instagram-color-transparent);
+}
+.topmate {
+  color: var(--topmate-color);
+  background-color: var(--topmate-color-transparent);
 }
 
 /***************************/
@@ -611,7 +617,7 @@ nav {
 }
 
 .attachment-btn, .other-attachment {
-  font-size: 0.85rem;
+  font-size: 0.675rem;
   font-weight: 500;
   color: var(--primary-color);
   display: flex;
@@ -660,7 +666,7 @@ nav {
 
 .responsibilities li {
   font-family: 'Inter', 'Poppins', sans-serif;
-  font-size: 1rem;
+  font-size: .875rem;
   position: relative;
   padding-left: 0;
   margin-bottom: 12px;
@@ -1042,7 +1048,7 @@ nav {
     border: 1px solid rgba(0,0,0,0.07);
   }
   .responsibilities li {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-align: left;
   }
   .attachment-btn, .other-attachment {
