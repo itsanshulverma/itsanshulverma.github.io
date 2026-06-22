@@ -249,3 +249,45 @@ gsap.from(".connect-options .social-icons", {
     start: "center bottom",
   },
 });
+
+window.addEventListener("load", () => {
+
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
+// Create a matchMedia instance to protect your mobile layout
+let mm = gsap.matchMedia();
+
+// Desktop Only (Matches your 768px CSS breakpoint)
+mm.add("(min-width: 769px)", () => {
+  
+  const glassFrame = document.querySelector('.glass-frame');
+  const hero = document.querySelector('.hero');
+  
+  // A dynamic GSAP .from() animation.
+  // It teleports the image up and to the right on load, 
+  // then scrubs it back to its native position as you scroll.
+  gsap.from(glassFrame, {
+    // 1. Calculate how far UP to push it into the Hero section
+    y: () => -(glassFrame.getBoundingClientRect().top - hero.getBoundingClientRect().top), 
+    
+    // 2. Calculate how far RIGHT to push it into the empty whitespace
+    x: () => window.innerWidth - glassFrame.getBoundingClientRect().right - 175,
+    
+    // Optional: Make it slightly larger and tilted when it's in the Hero section
+    scale: 1.05,
+    rotate: 3, 
+    
+    // 3. The scroll interaction
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top top",         // Start animating as soon as we scroll
+      end: "bottom center",     // Finish docking when the Hero leaves the screen
+      scrub: true,               // Makes the movement smooth and tied to the scroll wheel
+      invalidateOnRefresh: true // Recalculates the math if the user resizes their browser
+    }
+  });
+  
+});
+
+});

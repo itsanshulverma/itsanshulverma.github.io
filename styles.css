@@ -272,11 +272,11 @@ nav {
 .about-heading .bg-text {
   position: absolute;
   top: -150px;
-  right: -10px;
+  left: -10px;
   font-size: 10rem;
   font-weight: 500;
   color: var(--white);
-  opacity: 0.1 !important;
+  opacity: 0.075 !important;
   z-index: 1;
 }
 
@@ -286,20 +286,83 @@ nav {
 
 .about-content {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  padding: 0 100px;
 }
 
-.about-content .profile-photo {
+/* .about-content .profile-photo {
   width: 275px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: -100px;
   z-index: 2;
+} */
+
+/* 1. The Glass Wrapper (Middle Layer) */
+.about-content .glass-frame {
+  position: relative;
+  width: 275px;
+  height: 350px;
+  flex-shrink: 0; /* THIS IS THE FIX: Prevents the text from squishing the image */
+  margin-top: -100px;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  
+  /* The original clean fluid shape */
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 8s ease-in-out infinite;
+  transition: transform 1s ease-in-out;
+}
+
+/* 2. The Actual Photo inside the glass (Top Layer) */
+.about-content .glass-frame .profile-photo {
+  width: 95%; 
+  height: 95%;
+  object-fit: cover;
+  margin-top: 0; 
+  
+  /* EXACTLY matches the glass frame so it fits perfectly */
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 8s ease-in-out infinite;
+}
+
+/* Interactive Hover States */
+.about-content .glass-frame:hover {
+  transform: translateY(-10px);
+}
+
+/* Pauses the morphing when hovered so you can see the photo clearly */
+.about-content .glass-frame:hover,
+.about-content .glass-frame:hover .profile-photo {
+  animation-play-state: paused;
+}
+
+/* Shifts the offset layer on hover */
+.about-content .glass-frame:hover::before {
+  top: 25px; 
+  left: -25px;
+  opacity: 0.8;
+}
+
+/* Synchronized Keyframes so the glass and image move together */
+@keyframes morph {
+  0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
 }
 
 .about-content .about-text {
-  margin: 25px 0 30px 50px;
+  margin: 40px 50px 30px 0px;
 }
 .about-content .about-text p{
   margin: 12px 0;
@@ -920,9 +983,9 @@ nav {
     gap: 20px;
     padding: 0 50px;
   }
-  .about-content .profile-photo {
-    width: 225px;
-    margin-top: -50px;
+  .about-content .glass-frame {
+    width: 250px;
+    margin-top: -55px;
   }
   .about-content .about-text {
     margin: 0;
