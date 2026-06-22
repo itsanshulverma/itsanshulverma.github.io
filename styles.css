@@ -699,7 +699,7 @@ nav {
 .exp-attachments {
   display: flex;
   gap: 15px;
-  margin-top: 15px;
+  margin-top: 0px;
 }
 
 .attachment-btn, .other-attachment {
@@ -752,7 +752,7 @@ nav {
 
 .responsibilities li {
   font-family: 'Inter', 'Poppins', sans-serif;
-  font-size: .875rem;
+  font-size: .9rem;
   position: relative;
   padding-left: 0;
   margin-bottom: 12px;
@@ -782,6 +782,35 @@ nav {
 
 .experience-item-edu .responsibilities li i {
   color: var(--secondary-color);
+}
+
+.exp-toggle {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.exp-toggle:hover {
+  color: var(--primary-color);
+}
+
+.exp-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.exp-toggle.is-open i {
+  transform: rotate(180deg);
+}
+ 
+.exp-details {
+  overflow: hidden;
 }
 
 /***************************/
@@ -1157,8 +1186,14 @@ nav {
     text-align: left;
   }
   .attachment-btn, .other-attachment {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     padding: 4px 12px;
+  }
+  .exp-toggle {
+    margin-top: 15px;
+  }
+  .exp-subheading {
+    margin: 5px 0 5px 0 !important;
   }
 
   /* Connect & Footer */

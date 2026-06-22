@@ -250,9 +250,9 @@ gsap.from(".connect-options .social-icons", {
   },
 });
 
+// Scroll-Triggered Animation for the Glass Frame in the Hero Section
 window.addEventListener("load", () => {
 
-// Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 // Create a matchMedia instance to protect your mobile layout
@@ -290,4 +290,40 @@ mm.add("(min-width: 769px)", () => {
   
 });
 
+});
+
+// Experience Details Toggle
+document.addEventListener("DOMContentLoaded", () => {
+  
+  const toggles = document.querySelectorAll('.exp-toggle');
+
+  // Hide all details wrappers initially
+  gsap.set('.exp-details', { 
+    height: 0, 
+    opacity: 0,
+    marginBottom: 0
+  });
+
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      
+      // The wrapper is the element directly after the toggle
+      const details = toggle.nextElementSibling; 
+      const isOpen = toggle.classList.contains('is-open');
+      const textSpan = toggle.querySelector('span');
+
+      if (isOpen) {
+        // Close it
+        gsap.to(details, { height: 0, opacity: 0, marginBottom: 0, duration: 0.4, ease: 'power2.inOut' });
+        toggle.classList.remove('is-open');
+        textSpan.textContent = "view more details";
+      } else {
+        // Open it
+        gsap.to(details, { height: 'auto', opacity: 1, marginBottom: 15, duration: 0.4, ease: 'power2.inOut' });
+        toggle.classList.add('is-open');
+        textSpan.textContent = "hide details";
+      }
+    });
+  });
+  
 });
